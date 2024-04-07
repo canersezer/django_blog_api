@@ -19,5 +19,5 @@ class BlogModelViewSet(ModelViewSet):
     serializer_class = BlogSerializer
     filterset_fields = ["category"]
     search_fields = ["title","content"]
-    permission_classes = [IsAdminOrReadOnly,IsAuthenticated]
+    permission_classes = [IsAuthenticated]
 
