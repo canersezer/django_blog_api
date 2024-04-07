@@ -1,5 +1,3 @@
-from django.shortcuts import render
-
 from rest_framework.viewsets import ModelViewSet
 from rest_framework.permissions import IsAuthenticated
 
@@ -8,14 +6,12 @@ from .serializers import CategorySerializer,BlogSerializer
 from .permissions import IsAdminOrReadOnly
 
 
-
 class CatagoryModelViewSet(ModelViewSet):
     queryset=Category.objects.all()
     serializer_class = CategorySerializer
     filterset_fields = ["name"]
     search_fields = ["name"]
     permission_classes = [IsAdminOrReadOnly,IsAuthenticated]
-
 
 
 class BlogModelViewSet(ModelViewSet):
