@@ -10,7 +10,7 @@
 - Blog
 - User
 
-![Model]()
+![Model](https://github.com/canersezer/django_blog_api/blob/main/projectERD.jpg)
 
 # Users
 
